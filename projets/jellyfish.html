@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main_style.css">
+    <link rel="stylesheet" href="../css/style_projets.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap"
+        rel="stylesheet">
+    <title>Projet Jellyfish - Mateo BAL</title>
+    <style>
+        /* Jellyfish DA Elements */
+        :root {
+            --pg-bg: #030a16;
+            --brand-color: #00E5FF;
+            --jelly-purple: #A259FF;
+            --glow-cyan: rgba(0, 229, 255, 0.4);
+            --glow-purple: rgba(162, 89, 255, 0.4);
+        }
+
+        body {
+            background-color: var(--pg-bg);
+            background-image: radial-gradient(circle at 60% 0%, rgba(0, 229, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 100%, rgba(162, 89, 255, 0.1) 0%, transparent 60%);
+        }
+
+        .project-detail h2 {
+            color: white;
+            text-shadow: 0 0 15px var(--glow-cyan), 0 0 30px var(--glow-purple);
+            font-size: 3rem;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 450px;
+            margin: 0 auto 80px auto;
+            border-radius: 24px;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--brand-color), var(--jelly-purple));
+            box-shadow: 0 15px 40px var(--glow-purple), 0 0 80px rgba(0, 229, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: scale(1.02);
+        }
+
+        .project-video {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            display: block;
+            background-color: #000;
+        }
+
+        .jelly-desc {
+            background: radial-gradient(circle at 0% 0%, rgba(0, 229, 255, 0.05), transparent 80%), rgba(10, 15, 30, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(0, 229, 255, 0.2);
+            border-left: 1px solid rgba(162, 89, 255, 0.2);
+            border-radius: 24px;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            color: #d1d9e6;
+            text-align: left;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(162, 89, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .jelly-desc::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: skewX(-25deg);
+        }
+
+        .jelly-desc p {
+            margin-bottom: 20px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .jelly-desc p:last-child {
+            margin-bottom: 0;
+        }
+
+        .jelly-desc h3 {
+            color: #fff;
+            font-family: 'Electrolize', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--glow-purple);
+        }
+
+        .outils_utilises {
+            justify-content: center;
+            padding-top: 0;
+            margin-bottom: 60px;
+        }
+
+        .outil.jelly-tag {
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid var(--brand-color);
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+            font-weight: 600;
+            padding: 8px 18px;
+            letter-spacing: 1px;
+        }
+
+        .outil.jelly-tag:nth-child(even) {
+            background: rgba(162, 89, 255, 0.1);
+            border: 1px solid var(--jelly-purple);
+            box-shadow: 0 0 15px rgba(162, 89, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <a href="../index.html">
+                    <div class="logo">MT</div>
+                </a>
+                <div>
+                    <h1>Mateo BAL — Portfolio Web</h1>
+                    <p>Étudiant MMI • Spécialisation Web • UI/UX & Front-end</p>
+                </div>
+            </div>
+            <nav>
+                <a class="btn" href="../projets.html">Projets</a>
+                <a class="btn btn-primary" href="../contacts.html">Contacts</a>
+            </nav>
+        </header>
+
+        <section class="project-detail">
+            <h2>JELLYFISH</h2>
+
+            <div class="video-container">
+                <!-- Utilizing the video file from the root directory -->
+                <video class="project-video" controls autoplay loop muted>
+                    <source src="../vidéo_presentation.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+            </div>
+
+            <div class="jelly-desc">
+                <h3>Immersion dans les Abysses</h3>
+                <p><strong>Jellyfish</strong> est une expérience visuelle immersive plongeant l'utilisateur dans les
+                    mystères insondables de l'océan. Ce projet interactif met en lumière la beauté hypnotique de la
+                    faune bioluminescente, invitant à la contemplation et à la découverte.</p>
+                <p>La direction artistique s'appuie sur un contraste saisissant entre l'obscurité des fonds marins et
+                    l'éclat des couleurs néons — <strong>cyan</strong> et <strong>violet</strong> —, rappelant les
+                    lueurs naturelles émises par certaines méduses pour communiquer ou se défendre.</p>
+                <p>L'interface a été travaillée en <em>glassmorphism</em> pour évoquer la fluidité de l'eau, offrant une
+                    navigation douce et organique au sein de l'environnement abyssal.</p>
+            </div>
+
+            <div class="outils_utilises">
+                <div class="outil jelly-tag">Design UI/UX</div>
+                <div class="outil jelly-tag">Direction Artistique</div>
+                <div class="outil jelly-tag">React</div>
+                <div class="outil jelly-tag">Laravel</div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Mateo BAL - All Right Reserved</p>
+    </footer>
+</body>
+
+</html>
